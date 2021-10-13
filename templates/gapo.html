@@ -1,0 +1,90 @@
+<title>Iframe - minhpg.com</title>
+<style>
+body {
+  margin: 0;
+}
+        &.jw-stretch-uniform {
+        video {
+            object-fit: contain;
+        }
+    }
+
+    &.jw-stretch-none {
+        video {
+            object-fit: none;
+        }
+    }
+
+    &.jw-stretch-fill {
+        video {
+            object-fit: cover;
+        }
+    }
+
+    &.jw-stretch-exactfit {
+        video {
+            object-fit: fill;
+        }
+    }
+      
+.video-dimensions {
+    width: 100%;
+    height: 100%;
+    }
+
+</style>
+
+<script  data-cfasync="false" src="/static/jwplayer.js"></script>
+<script type="text/javascript">jwplayer.key = "ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=";</script>
+<body>
+<div id="jwplayer">
+</div>
+<script>
+var playerInstance = jwplayer("jwplayer");
+playerInstance.setup({
+height: "100%",
+width: "100%",
+sources: [{
+        "file": "{{hd}}",
+        "label": "720p HD",
+        "default": "true",
+        "type": "{{type}}"
+      },{
+        "file": "{{sd}}",
+        "label": "360p SD",
+        "type": "{{type}}"
+              }],
+playbackRateControls: [0.75, 1, 1.25, 1.5],
+//logo: {
+//        file: "static/kyunlogo.png",
+//        link: "https://kyunkyun.net",
+//        position: "top-left"
+//      },
+});
+playerInstance.addButton(
+   'Download video', 
+   function() {  
+    window.open(playerInstance.getPlaylistItem()['file'], '_blank').blur();
+ },
+'download'
+);
+</script>
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5WD5JTCMRK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5WD5JTCMRK');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176558902-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176558902-1');
+</script>
